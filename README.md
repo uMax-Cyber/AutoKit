@@ -1,33 +1,46 @@
-📢 Telegram Autosender
+<div align="center">
 
-🔧 Install Python: Ensure that you have Python installed on your system. You can download the latest version of Python from the official website: Python Downloads
+[![English](https://img.shields.io/badge/README-English-blue)](README.md)
+[![Рус](https://img.shields.io/badge/README-Русский-red)](README.ru.md)
+[![Oʻzbekcha](https://img.shields.io/badge/README-Oʻzbekcha-green)](README.uz.md)
 
-1️⃣ Install the required packages: Open a command prompt or terminal and run the following commands to install the necessary packages:
+</div>
 
-Copy code
-pip install -r requirements.txt
+# AutoKit — Python Automation Scripts
 
-2️⃣ Obtain API credentials: You need to obtain API credentials from the Telegram website. Follow these steps:
+Collection of practical automation scripts: Wake-on-LAN scheduling, UniFi API device management, and Telegram auto-messaging daemon.
 
-Visit Telegram API
-Log in to your Telegram account.
-Under "API development tools," create a new application by providing a name, description, and website (can be any valid URL).
+## Scripts
 
-3️⃣ Once created, you will see the "App api_id" and "App api_hash" values. Replace '2112213' with your api_id and '222223' with your api_hash in the code.
+| Script | Purpose |
+|--------|---------|
+| `python_wol_8_00.py` | Wake-on-LAN — powers on machines at scheduled time |
+| `unifi_api_block_unblock.py` | Block/unblock network devices via UniFi API |
+| `telegram-autosend` | Automated Telegram message sender |
+| `autosend.service` | systemd unit for auto-send daemon |
 
-Set your phone number: Replace '+654654654654' with your actual phone number in international format (including the country code) inside the code. (telegram-autosend.py)
+## Usage
 
-4️⃣ Add contacts and sticker paths: Modify the contacts dictionary to include the desired user IDs and corresponding sticker paths. User IDs can be obtained from the Telegram API or other methods.
+```bash
+# Wake-on-LAN at 8:00 AM (cron)
+0 8 * * * python3 python_wol_8_00.py
 
-5️⃣ Save the Python file: Save the Python file with the modifications made.
+# Block/unblock device via UniFi
+python3 unifi_api_block_unblock.py --mac AA:BB:CC:DD:EE:FF --action block
 
-6️⃣ Run the code: Open a command prompt or terminal, navigate to the directory where the Python file is saved, and run the following command:
+# Start auto-send daemon
+systemctl start autosend
+```
 
-Copy code
-python3 telegram_autosend.py
+## 📬 Contact
+📧 **[allumaxmail@gmail.com](mailto:allumaxmail@gmail.com)**
 
-7️⃣ Keep the script running: The script will run indefinitely, checking the schedule and sending stickers every Friday at 6:00 AM. You can close the command prompt or terminal if you want to stop the script.
+---
 
-8️⃣ If you want to run this script as a service on startup, copy the file autosend.service to the folder /etc/systemd/system and edit it with nano!
+<div align="center">
 
-💥 Bonus: Amazing Unifi f**king script for joking with WiFi clients
+[![English](https://img.shields.io/badge/README-English-blue)](README.md)
+[![Русский](https://img.shields.io/badge/README-Русский-red)](README.ru.md)
+[![Oʻzbekcha](https://img.shields.io/badge/README-Oʻzbekcha-green)](README.uz.md)
+
+</div>
